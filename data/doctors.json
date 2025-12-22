@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Dr. Ankit Singla",
+    "specialization": "Urology",
+    "opd": "OPD 5",
+    "timing": "1:00 PM - 2:00 PM",
+    "symptoms": [
+      "kidney stone / गुर्दे की पथरी / ਗੁਰਦੇ ਦੀ ਪੱਥਰੀ",
+      "urine infection / पेशाब में इंफेक्शन / ਪਿਸ਼ਾਬ ਦੀ ਇਨਫੈਕਸ਼ਨ",
+      "burning urination / पेशाब में जलन / ਪਿਸ਼ਾਬ ਵਿੱਚ ਜਲਨ",
+      "blood in urine / पेशाब में खून / ਪਿਸ਼ਾਬ ਵਿੱਚ ਖੂਨ"
+    ]
+  },
+  {
+    "name": "Dr. Deepinder Singh",
+    "specialization": "Orthopedics",
+    "opd": "OPD 9",
+    "timing": "10:30 AM - 3:00 PM",
+    "symptoms": [
+      "joint pain / जोड़ों का दर्द / ਜੋੜਾਂ ਦਾ ਦਰਦ",
+      "back pain / कमर दर्द / ਪਿੱਠ ਦਰਦ",
+      "fracture / हड्डी टूटना / ਹੱਡੀ ਟੁੱਟਣਾ",
+      "knee pain / घुटने का दर्द / ਘੁੱਟਨੇ ਦਾ ਦਰਦ"
+    ]
+  },
+  {
+    "name": "Dr. H. S. Sandhu, Dr. Naman Maddan",
+    "specialization": "Medicine",
+    "opd": "OPD 10",
+    "timing": "10:30 AM - 2:00 PM",
+    "symptoms": [
+      "fever / बुखार / ਬੁਖਾਰ",
+      "diabetes / मधुमेह / ਸ਼ੂਗਰ",
+      "blood pressure / ब्लड प्रेशर / ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ",
+      "weakness / कमजोरी / ਕਮਜ਼ੋਰੀ"
+    ]
+  },
+  {
+    "name": "Dr. Kusum Mahajan",
+    "specialization": "Pediatrics",
+    "opd": "OPD 10",
+    "timing": "10:30 AM - 5:00 PM",
+    "symptoms": [
+      "child fever / बच्चे को बुखार / ਬੱਚੇ ਨੂੰ ਬੁਖਾਰ",
+      "cold cough / सर्दी खांसी / ਜ਼ੁਕਾਮ ਖਾਂਸੀ",
+      "vomiting / उल्टी / ਉਲਟੀ",
+      "growth issues / विकास समस्या / ਵਿਕਾਸ ਸਮੱਸਿਆ"
+    ]
+  },
+  {
+    "name": "Dr. Maninder Kaur",
+    "specialization": "Neurology",
+    "opd": "OPD 10",
+    "timing": "5:00 PM - 6:00 PM",
+    "symptoms": [
+      "headache / सिर दर्द / ਸਿਰ ਦਰਦ",
+      "epilepsy / मिर्गी / ਮਿਰਗੀ",
+      "memory loss / याददाश्त की कमी / ਯਾਦਦਾਸ਼ਤ ਘਟਣਾ",
+      "paralysis / लकवा / ਲੱਕਵਾ"
+    ]
+  },
+  {
+    "name": "Dr. Meet Srijana Kaur",
+    "specialization": "Medicine",
+    "opd": "OPD 6",
+    "timing": "10:30 AM - 2:00 PM",
+    "symptoms": [
+      "fever / बुखार / ਬੁਖਾਰ",
+      "infection / संक्रमण / ਇਨਫੈਕਸ਼ਨ",
+      "body pain / शरीर दर्द / ਸਰੀਰ ਦਰਦ",
+      "fatigue / थकान / ਥਕਾਵਟ"
+    ]
+  },
+  {
+    "name": "Dr. N. P. Singh",
+    "specialization": "Medicine",
+    "opd": "OPD 2",
+    "timing": "10:30 AM - 2:00 PM",
+    "symptoms": [
+      "chest pain / सीने में दर्द / ਛਾਤੀ ਦਰਦ",
+      "breathing problem / सांस की दिक्कत / ਸਾਹ ਦੀ ਸਮੱਸਿਆ",
+      "high BP / उच्च रक्तचाप / ਉੱਚ ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ",
+      "weakness / कमजोरी / ਕਮਜ਼ੋਰੀ"
+    ]
+  },
+  {
+    "name": "Dr. Rahul Madan",
+    "specialization": "Cardiology",
+    "opd": "OPD 3",
+    "timing": "10:30 AM - 4:00 PM",
+    "symptoms": [
+      "heart pain / दिल का दर्द / ਦਿਲ ਦਾ ਦਰਦ",
+      "palpitations / दिल की धड़कन तेज / ਦਿਲ ਧੜਕਣ ਤੇਜ਼",
+      "shortness of breath / सांस फूलना / ਸਾਹ ਚੜ੍ਹਨਾ",
+      "high cholesterol / कोलेस्ट्रॉल / ਕੋਲੇਸਟਰੋਲ"
+    ]
+  },
+  {
+    "name": "Dr. Rajit Jhingan",
+    "specialization": "Pain Management Physician",
+    "opd": "OPD 10",
+    "timing": "1st and 3rd Sunday",
+    "symptoms": [
+      "chronic pain / पुराना दर्द / ਲੰਬੇ ਸਮੇਂ ਦਾ ਦਰਦ",
+      "neck pain / गर्दन दर्द / ਗਰਦਨ ਦਰਦ",
+      "nerve pain / नसों का दर्द / ਨਸਾਂ ਦਾ ਦਰਦ",
+      "back pain / कमर दर्द / ਪਿੱਠ ਦਰਦ"
+    ]
+  },
+  {
+    "name": "Dr. Ranju Vij",
+    "specialization": "Dermatology",
+    "opd": "OPD 8",
+    "timing": "10:30 AM - 8:00 PM",
+    "symptoms": [
+      "skin allergy / त्वचा एलर्जी / ਚਮੜੀ ਐਲਰਜੀ",
+      "acne / मुंहासे / ਮੁਹਾਂਸੇ",
+      "itching / खुजली / ਖੁਜਲੀ",
+      "hair fall / बाल झड़ना / ਵਾਲਾਂ ਦਾ ਝੜਨਾ"
+    ]
+  },
+  {
+    "name": "Dr. Rupesh",
+    "specialization": "Psychiatry",
+    "opd": "OPD 10",
+    "timing": "5:00 PM - 8:00 PM",
+    "symptoms": [
+      "depression / अवसाद / ਡਿਪ੍ਰੈਸ਼ਨ",
+      "anxiety / घबराहट / ਚਿੰਤਾ",
+      "sleep disorder / नींद की समस्या / ਨੀਂਦ ਦੀ ਸਮੱਸਿਆ",
+      "stress / तनाव / ਤਣਾਅ"
+    ]
+  },
+  {
+    "name": "Dr. Sahil Arora",
+    "specialization": "General Surgery",
+    "opd": "OPD 10",
+    "timing": "3:00 PM - 8:00 PM",
+    "symptoms": [
+      "hernia / हर्निया / ਹਰਨੀਆ",
+      "appendix pain / एपेंडिक्स दर्द / ਐਪੈਂਡਿਕਸ ਦਰਦ",
+      "boils / फोड़े / ਫੋੜੇ",
+      "wound infection / जख्म इंफेक्शन / ਜਖਮ ਇਨਫੈਕਸ਼ਨ"
+    ]
+  },
+  {
+    "name": "Dr. Sambhav Jain",
+    "specialization": "Dental",
+    "opd": "OPD 7",
+    "timing": "3:00 PM - 5:00 PM",
+    "symptoms": [
+      "toothache / दांत दर्द / ਦੰਦ ਦਰਦ",
+      "gum bleeding / मसूड़ों से खून / ਮਸੂੜਿਆਂ ਤੋਂ ਖੂਨ",
+      "cavities / दांत में कीड़ा / ਦੰਦ ਕੀੜਾ",
+      "bad breath / मुंह की बदबू / ਮੂੰਹ ਦੀ ਬਦਬੂ"
+    ]
+  },
+  {
+    "name": "Dr. Nippun Bhamrah",
+    "specialization": "ENT",
+    "opd": "FULL TIME",
+    "timing": "10:00 AM - 2:00 PM",
+    "symptoms": [
+      "ear pain / कान दर्द / ਕੰਨ ਦਰਦ",
+      "throat infection / गले का इंफेक्शन / ਗਲੇ ਦੀ ਇਨਫੈਕਸ਼ਨ",
+      "hearing loss / सुनने में दिक्कत / ਸੁਣਨ ਵਿੱਚ ਦਿੱਕਤ",
+      "sinus / साइनस / ਸਾਈਨਸ"
+    ]
+  }
+]

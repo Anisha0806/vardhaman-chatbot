@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vardhman Mahaveer Health Care</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        #map {
+            height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #three-container {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            cursor: grab;
+            overflow: hidden;
+            touch-action: none;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* New Hero styling */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+            position: relative;
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(20deg);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-blue-600 text-white py-6 px-4 shadow-md sticky top-0 z-50">
+        <div class="container flex flex-col md:flex-row items-center justify-between">
+            <h1 class="text-2xl md:text-3xl font-bold mb-4 md:mb-0" id="hospital-name">Vardhman Mahaveer Health Care</h1>
+            <nav class="flex items-center space-x-4 md:space-x-8">
+                <a href="#" class="nav-link font-semibold hover:underline" data-page="home" id="nav-home">Home</a>
+                <a href="#" class="nav-link font-semibold hover:underline" data-page="3d-view" id="nav-3d">3D View</a>
+                <a href="#" class="nav-link font-semibold hover:underline" data-page="chatbot" id="nav-chatbot">Chatbot</a>
+                <a href="#" class="nav-link font-semibold hover:underline" data-page="contact" id="nav-contact">Contact Us</a>
+                <div class="relative">
+                    <select id="language-switcher" class="bg-white text-blue-600 font-semibold rounded-full py-1 px-3 appearance-none focus:outline-none">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="pa">ਪੰਜਾਬੀ</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-12 px-4">
+        <div id="home-page" class="page active">
+            <section class="hero mb-12 rounded-xl card-shadow">
+                <div class="container relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4" id="hero-title">Your Health, Our Priority</h2>
+                    <p class="text-xl md:text-2xl mb-8" id="hero-subtitle">Providing Comprehensive & Compassionate Care in Patiala.</p>
+                    <a href="#" class="nav-link bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition-colors duration-300" data-page="contact" id="hero-cta">Book an Appointment</a>
+                </div>
+            </section>
+
+            <section id="about" class="container mb-12 fade-in">
+                <div class="bg-white p-8 rounded-xl card-shadow">
+                    <h2 class="text-3xl font-semibold mb-4 text-blue-700" id="about-title">About Us</h2>
+                    <p class="text-gray-600 leading-relaxed" id="about-text">
+                        Vardhman Mahaveer Health Care is a premier multi-specialty hospital located in the heart of Patiala. With a patient-centric approach and a team of highly skilled medical professionals, we are committed to providing comprehensive, personalized, and compassionate care to our community. Our state-of-the-art facilities and a wide range of specialized services ensure that we meet the diverse healthcare needs of our patients with the utmost dedication and excellence.
+                    </p>
+                </div>
+            </section>
+
+            <section id="services" class="container mb-12 fade-in">
+                <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700" id="services-title">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl card-shadow hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-bold text-gray-700 mb-2" id="service-cardio-title">Cardiology</h3>
+                        <p class="text-gray-600" id="service-cardio-text">Comprehensive care for heart and vascular health, including diagnostic and interventional procedures.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-bold text-gray-700 mb-2" id="service-ortho-title">Orthopedics</h3>
+                        <p class="text-gray-600" id="service-ortho-text">Expert treatment for bone, joint, and muscle conditions, from sports injuries to joint replacement surgery.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-bold text-gray-700 mb-2" id="service-obgyn-title">Obstetrics & Gynaecology</h3>
+                        <p class="text-gray-600" id="service-obgyn-text">Providing comprehensive care for women's health, including maternity and reproductive services.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-bold text-gray-700 mb-2" id="service-dental-title">Dentistry</h3>
+                        <p class="text-gray-600" id="service-dental-text">Advanced dental care, from general dentistry to oral and maxillofacial surgery.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-bold text-gray-700 mb-2" id="service-surgery-title">General Surgery</h3>
+                        <p class="text-gray-600" id="service-surgery-text">Skilled surgical team for a wide range of procedures, ensuring patient safety and effective outcomes.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-bold text-gray-700 mb-2" id="service-neuro-title">Neurology</h3>
+                        <p class="text-gray-600" id="service-neuro-text">Diagnosis and treatment of disorders affecting the nervous system, including the brain and spine.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="location" class="container mb-12 fade-in">
+                <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700" id="location-title">Find Us</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl card-shadow">
+                        <h3 class="text-xl font-bold text-gray-700 mb-4" id="location-card-title">Our Location</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4" id="location-text-1">
+                            Vardhman Mahaveer Health Care is conveniently located on Rajpura Road in Urban Estate, Patiala. Our easily accessible location ensures a smooth commute for all our patients and visitors.
+                        </p>
+                        <div class="text-gray-600 space-y-2">
+                            <p id="location-address"><strong class="font-semibold text-gray-800">Address:</strong> S.C.O-34, Urban Estate, Phase-2, Rajpura Road, Patiala, Punjab, 147002</p>
+                            <p id="location-phone"><strong class="font-semibold text-gray-800">Phone:</strong> 0175-5051234</p>
+                        </div>
+                    </div>
+                    <div id="map" class="rounded-xl card-shadow"></div>
+                </div>
+            </section>
+        </div>
+        <div id="3d-view-page" class="page">
+    <section class="container py-12">
+        <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700" id="3d-title">
+            3D View of a Hospital
+        </h2>
+
+        <div class="bg-gray-100 p-4 rounded-xl card-shadow flex flex-col items-center">
+
+            <!-- 🔹 NEW BUTTON HERE -->
+            <button 
+                onclick="openReal3DModel()"
+                class="mb-4 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                🔗 View Real 3D Model (Interactive)
+            </button>
+
+            <div id="three-container" class="bg-gray-200 rounded-lg"></div>
+
+            <p class="mt-4 text-center text-sm text-gray-500" id="3d-note">
+                *This is a symbolic 3D representation and not an exact replica of the hospital building.
+            </p>
+        </div>
+    </section>
+</div>
+
+        <div id="chatbot-page" class="page">
+            <section class="container py-12">
+                <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700" id="chatbot-title">Hospital Chatbot</h2>
+                <div class="bg-white p-8 rounded-xl card-shadow flex flex-col items-center">
+                    <div id="chat-box" class="w-full max-w-lg h-96 bg-gray-100 rounded-xl p-4 overflow-y-auto mb-4 border border-gray-300">
+                        <div class="flex items-start mb-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">Bot</div>
+                            <div class="ml-3 p-3 bg-blue-100 rounded-xl max-w-[80%]">
+                                <p class="text-sm" id="chatbot-intro-message">
+                                    Hello! How can I help you today? You can ask me about our services, timings, or location.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-lg flex">
+                        <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 p-3 rounded-l-full border-t border-b border-l border-gray-300 focus:outline-none focus:border-blue-500">
+                        <button id="chat-send-btn" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-r-full hover:bg-blue-700 transition-colors">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="contact-page" class="page">
+            <section class="container py-12">
+                   <h2 class="text-3xl font-semibold mb-6 text-center text-blue-700" id="contact-title">Contact & Appointments</h2>
+                   <div class="bg-white p-8 rounded-xl card-shadow text-center">
+                    <h3 class="text-xl font-bold text-gray-700 mb-2" id="contact-card-title">Contact & Appointments</h3>
+                    <p id="contact-text-1">For appointments or inquiries, please contact us at:</p>
+                    <p class="text-lg font-semibold text-gray-800 mt-2" id="contact-phone">
+                        0175-5051234
+                    </p>
+                    <p class="mt-1 text-sm text-gray-600" id="contact-email">
+                        <a href="mailto:info@vardhmanhealthcare.com" class="hover:underline">info@vardhmanhealthcare.com</a>
+                    </p>
+                   </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 px-4 text-center">
+        <div class="container">
+            <p class="text-sm" id="footer-text">&copy; 2025 Vardhman Mahaveer Health Care. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

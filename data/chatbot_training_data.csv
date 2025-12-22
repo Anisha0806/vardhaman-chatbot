@@ -1,0 +1,93 @@
+phrase,intent
+hi,greeting
+hello,greeting
+hey,greeting
+good morning,greeting
+good evening,greeting
+how are you,greeting
+namaste,greeting
+sat sri akal,greeting
+नमस्ते,greeting
+नमस्कार,greeting
+सत श्री अकाल,greeting
+क्या हाल है?,greeting
+आप कैसे हैं?,greeting
+ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ,greeting
+ਨਮਸਤੇ,greeting
+ਹੈਲੋ,greeting
+ਤੁਹਾਡਾ ਕੀ ਹਾਲ ਹੈ?,greeting
+ਕਿਵੇਂ ਹੋ?,greeting
+what services do you offer?,services_query
+what departments do you have?,services_query
+what specialities are available?,services_query
+i need a doctor for my heart,services_query
+can you tell me about your doctors?,services_query
+what are your medical services?,services_query
+आप क्या सेवाएं देते हैं?,services_query
+आपके पास कौन से विभाग हैं?,services_query
+आपके डॉक्टर कौन हैं?,services_query
+क्या सेवाएं उपलब्ध हैं?,services_query
+ਤੁਸੀਂ ਕਿਹੜੀਆਂ ਸੇਵਾਵਾਂ ਪੇਸ਼ ਕਰਦੇ ਹੋ?,services_query
+ਤੁਹਾਡੇ ਕੋਲ ਕਿਹੜੇ ਵਿਭਾਗ ਹਨ?,services_query
+ਕਿਹੜੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਉਪਲਬਧ ਹਨ?,services_query
+ਤੁਹਾਡੇ ਡਾਕਟਰਾਂ ਬਾਰੇ ਦੱਸੋ?,services_query
+where are you located?,location_query
+what is your address?,location_query
+how do I get there?,location_query
+directions to the hospital,location_query
+can you show me on a map?,location_query
+tell me about your location,location_query
+आप कहाँ स्थित हैं?,location_query
+आपका पता क्या है?,location_query
+मैं वहां कैसे पहुंच सकता हूं?,location_query
+अस्पताल का रास्ता,location_query
+ਤੁਸੀਂ ਕਿੱਥੇ ਸਥਿਤ ਹੋ?,location_query
+ਤੁਹਾਡਾ ਪਤਾ ਕੀ ਹੈ?,location_query
+ਮੈਂ ਉੱਥੇ ਕਿਵੇਂ ਪਹੁੰਚ ਸਕਦਾ ਹਾਂ?,location_query
+ਹਸਪਤਾਲ ਦਾ ਰਸਤਾ,location_query
+what are your timings?,timings_query
+when are you open?,timings_query
+what are the OPD hours?,timings_query
+are you open on weekends?,timings_query
+what time do you close?,timings_query
+what are your office hours?,timings_query
+आपकी समय सारिणी क्या है?,timings_query
+आप कब खुले होते हैं?,timings_query
+ओपीडी का समय क्या है?,timings_query
+ਕੀ ਤੁਸੀਂ ਵੀਕਐਂਡ 'ਤੇ ਖੁੱਲ੍ਹੇ ਹੁੰਦੇ ਹੋ?,timings_query
+ਤੁਹਾਡੇ ਖੁੱਲ੍ਹਣ ਦਾ ਸਮਾਂ ਕੀ ਹੈ?,timings_query
+ਓਪੀਡੀ ਦਾ ਸਮਾਂ ਕੀ ਹੈ?,timings_query
+how can I contact you?,contact_query
+what is your phone number?,contact_query
+can I book an appointment?,contact_query
+what's your email?,contact_query
+how to schedule an appointment?,contact_query
+how do I make an appointment?,contact_query
+मैं आपसे कैसे संपर्क कर सकता हूं?,contact_query
+आपका फोन नंबर क्या है?,contact_query
+क्या मैं अपॉइंटमेंट बुक कर सकता हूं?,contact_query
+ਤੁਸੀਂ ਮੈਨੂੰ ਕਿਵੇਂ ਮਿਲ ਸਕਦੇ ਹੋ?,contact_query
+ਤੁਹਾਡਾ ਫੋਨ ਨੰਬਰ ਕੀ ਹੈ?,contact_query
+ਮੈਂ ਅਪੁਆਇੰਟਮੈਂਟ ਕਿਵੇਂ ਲੈ ਸਕਦਾ ਹਾਂ?,contact_query
+do you accept insurance?,insurance_query
+what insurance do you take?,insurance_query
+do you have a billing department?,insurance_query
+is my insurance plan covered?,insurance_query
+can you tell me about health coverage?,insurance_query
+क्या आप बीमा स्वीकार करते हैं?,insurance_query
+आप कौन सा बीमा लेते हैं?,insurance_query
+क्या मेरा बीमा योजना कवर है?,insurance_query
+ਕੀ ਤੁਸੀਂ ਬੀਮਾ ਸਵੀਕਾਰ ਕਰਦੇ ਹੋ?,insurance_query
+ਤੁਸੀਂ ਕਿਹੜਾ ਬੀਮਾ ਲੈਂਦੇ ਹੋ?,insurance_query
+ਕੀ ਮੇਰਾ ਬੀਮਾ ਪਲਾਨ ਕਵਰ ਹੈ?,insurance_query
+i have an emergency,emergency_query
+i need immediate help,emergency_query
+is this an emergency number?,emergency_query
+i need to go to the emergency room,emergency_query
+what do i do in an emergency?,emergency_query
+मुझे एक आपातकाल है,emergency_query
+मुझे तुरंत मदद चाहिए,emergency_query
+क्या यह आपातकालीन नंबर है?,emergency_query
+ਮੈਨੂੰ ਐਮਰਜੈਂਸੀ ਹੈ,emergency_query
+ਮੈਨੂੰ ਤੁਰੰਤ ਮਦਦ ਚਾਹੀਦੀ ਹੈ,emergency_query
+ਕੀ ਇਹ ਐਮਰਜੈਂਸੀ ਨੰਬਰ ਹੈ?,emergency_query
