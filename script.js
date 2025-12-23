@@ -245,7 +245,7 @@ async function handleChatbotMessage() {
 
     try {
         // Send to FastAPI on Port 8000
-        const response = await fetch('http://127.0.0.1:8000/chat', {
+        const response = await fetch("https://vardhaman-chatbot.onrender.com/chat", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: message }) // 'message' matches Python ChatRequest
